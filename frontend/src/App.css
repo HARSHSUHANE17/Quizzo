@@ -1,0 +1,296 @@
+.app {
+  height: 100vh;
+  display: flex;
+  color: white;
+  background-color: #020230;
+}
+
+.main {
+  width: 75%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #020230),
+    url("https://i.ytimg.com/vi/yQbJRGs0fy8/maxresdefault.jpg") center;
+  display: flex;
+  flex-direction: column;
+}
+
+.pyramid {
+  width: 25%;
+  background-color: #020230;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.moneyList {
+  padding: 20px;
+  list-style: none;
+  width: 100%;
+}
+
+.moneyListItem {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.moneyListItem.active {
+  background-color: teal;
+}
+
+.moneyListItemNumber {
+  width: 30%;
+  font-size: 18px;
+  font-weight: 100;
+}
+
+.moneyListItemAmount {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.top {
+  height: 50%;
+  position: relative;
+}
+
+.timer {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 5px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 10px;
+  left: 80px;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.bottom {
+  height: 50%;
+}
+
+.trivia {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.question {
+  width: 80%;
+  background: linear-gradient(#100241, black);
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid white;
+  font-size: 20px;
+}
+
+.answers {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.answer {
+  width: 40%;
+  padding: 10px;
+  margin: 0 10px 20px 10px;
+  text-align: center;
+  background: linear-gradient(#0e0124, #22074d);
+  border: 1px solid white;
+  border-radius: 15px;
+  font-weight: 300;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.answer:hover,
+.answer.active {
+  background: mediumblue;
+}
+
+.answer.correct {
+  animation: correct 3s ease forwards;
+}
+
+@keyframes correct {
+  0%,
+  22%,
+  42% {
+    background: mediumblue;
+  }
+  20%,
+  40%,
+  60% {
+    background: linear-gradient(#0e0124, #22074d);
+  }
+  62%,
+  100% {
+    background: green;
+  }
+}
+
+.answer.wrong {
+  animation: wrong 3s ease forwards;
+}
+
+@keyframes wrong {
+  0%,
+  22%,
+  42% {
+    background: mediumblue;
+  }
+  20%,
+  40%,
+  60% {
+    background: linear-gradient(#0e0124, #22074d);
+  }
+  62%,
+  100% {
+    background: crimson;
+  }
+}
+
+.endText {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+/*
+.start {
+  width: 250px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.startInput {
+  width: 100%;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.startInput:focus {
+  outline: none;
+}
+
+.startButton {
+  width: 100%;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+}
+  */
+
+  .start {
+  width: 300px;
+  height: 160px;
+  background: rgba(0, 255, 230, 0.1);
+  border-radius: 15px;
+  box-shadow:
+    0 0 10px rgba(0, 255, 230, 0.5),
+    inset 0 0 15px rgba(0, 255, 230, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin: auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #00ffe6;
+  text-shadow: 0 0 10px #00ffe6;
+  user-select: none;
+}
+
+.startTitle {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+  text-align: center;
+  text-shadow:
+    0 0 10px #00ffe6,
+    0 0 20px #00ffe6,
+    0 0 30px #00ffe6;
+}
+
+.startInput {
+  width: 100%;
+  height: 38px;
+  border: none;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 18px;
+  color: #020230;
+  font-weight: 600;
+  box-shadow:
+    0 0 5px rgba(0, 255, 230, 0.7),
+    inset 0 0 8px rgba(0, 255, 230, 0.4);
+  transition: box-shadow 0.3s ease;
+}
+
+.startInput::placeholder {
+  color: #00ccc7;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+.startInput:focus {
+  outline: none;
+  box-shadow:
+    0 0 12px #00fff3,
+    inset 0 0 12px #00fff3;
+}
+
+.startButton {
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 700;
+  color: #020230;
+  background: linear-gradient(135deg, #00ffe6, #00ccff);
+  box-shadow:
+    0 0 15px #00ccff,
+    0 5px 15px rgba(0, 204, 255, 0.5);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  user-select: none;
+}
+
+.startButton:hover {
+  background: linear-gradient(135deg, #00ccff, #00ffff);
+  box-shadow:
+    0 0 20px #00ffff,
+    0 5px 20px rgba(0, 255, 255, 0.7);
+}
+
+.startButton:active {
+  background: #00aabb;
+  box-shadow: none;
+}
+
